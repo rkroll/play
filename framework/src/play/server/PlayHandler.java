@@ -800,6 +800,8 @@ public class PlayHandler extends SimpleChannelUpstreamHandler {
                 }
             }
         } catch (Throwable exxx) {
+        	Logger.error(exxx, "Error during the 500 response generation");
+        	
             try {
                 final String errorHtml = "Internal Error (check logs)";
                 byte[] bytes = errorHtml.getBytes(encoding);
