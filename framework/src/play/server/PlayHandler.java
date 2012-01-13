@@ -800,6 +800,7 @@ public class PlayHandler extends SimpleChannelUpstreamHandler {
                 }
             }
         } catch (Throwable exxx) {
+        	Logger.error(e, "Error during the 500 response generation cause by exception");
         	Logger.error(exxx, "Error during the 500 response generation");
         	
             try {
